@@ -1,0 +1,102 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "input-autocomplete",
+    "friendlyName": "Text Autocomplete",
+    "description": "A text input component that offers a configurable autocomplete that can be attached to a field in a data provider.",
+    "icon": "Text",
+    "settings": [
+            {
+                "key": "field",
+                "type": "field/string",
+                "label": "Field",
+                "required": true
+            },
+            {
+                "key": "label",
+                "type": "text",
+                "label": "Label"
+            },
+            {
+                "key": "placeholder",
+                "type": "text",
+                "label": "Placeholder"
+            },
+            {
+                "key": "defaultValue",
+                "type": "text",
+                "label": "Default Value"
+            },
+            {
+                "type": "dataProvider",
+                "label": "Data provider",
+                "key": "dataProvider",
+                "required": true
+            },
+            {
+                "key": "providerField",
+                "type": "text",
+                "label": "Data Provider Field",
+                "required": true
+            },
+            {
+                "key": "maxRows",
+                "type": "number",
+                "label": "Autocomplete Rows",
+                "required": true
+            },
+            {
+                "key": "beginSearch",
+                "type": "number",
+                "label": "Start Autocomplete On",
+                "required": true
+            },
+            {
+                "name": "Size",
+                "section": true,
+                "settings": [
+                    {
+                        "key": "width",
+                        "type": "number",
+                        "label": "Width (px)",
+                        "defaultValue": "auto"
+                    },
+                    {
+                        "key": "height",
+                        "type": "number",
+                        "label": "Height (px)",
+                        "defaultValue": "auto"
+                    }
+                ]
+            },
+            {
+                "key": "onEnterKey",
+                "type": "event",
+                "label": "On Enter Key",
+                "context": [
+                    {
+                        "key": "value",
+                        "label": "Value"
+                    }
+                ]
+            },
+            {
+                "key": "onBlur",
+                "type": "event",
+                "label": "On Blur",
+                "context": [
+                    {
+                        "key": "value",
+                        "label": "Value"
+                    }
+                ]
+            },
+            {
+                "type": "validation/number",
+                "label": "Validation",
+                "key": "validation"
+              }
+        ]
+  }
+}
