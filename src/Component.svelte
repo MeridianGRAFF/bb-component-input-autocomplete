@@ -121,7 +121,7 @@
       e.target.selectionEnd = value.length + 1;
       e.target.selectionStart = value.length + 1;
     } else if (e.keyCode === 13 && value && onEnterKey) {
-      if (hiLiteIndex !== null && hiLiteIndex !== 0) {
+      if (hiLiteIndex !== null) {
         setInputVal(filteredResults[hiLiteIndex]);
         value = inputValue;
         onEnterKey({ value });

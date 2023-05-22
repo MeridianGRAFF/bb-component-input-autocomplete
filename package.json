@@ -1,6 +1,6 @@
 {
   "name": "input-autocomplete",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "description": "A text input component that offers a configurable autocomplete that can be attached to a field in a data provider.",
   "license": "MIT",
   "svelte": "index.js",
