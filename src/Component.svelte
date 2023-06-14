@@ -29,6 +29,7 @@
   let searchInput; // use with bind:this to focus element
   let inputValue = "";
   let autocompleteHover = 0
+  let autocompleteClicked = 0
 
   const formApi = formContext?.formApi;
   const labelPos = fieldGroupContext?.labelPosition || "above";
@@ -75,10 +76,16 @@
     filteredResults = [];
     hiLiteIndex = null;
     fieldApi?.setValue(inputValue);
-    document.querySelector('input.spectrum-Textfield-input').focus();
+    autocompleteClicked = 1;
+    document.querySelector('input.autocomplete-input').focus();
   };
 
   const filterResults = (e) => {
+    if autocompleteClicked === 1 {
+      autocompleteClicked = 0;
+      clearInput();
+      return;
+    };
     if (e.target.value) {
       e.target.value = e.target.value.replace(/\s/g, '');
       inputValue = e.target.value;
@@ -189,7 +196,7 @@
             on:keydown={handleInputEnterKey}
             on:input={filterResults}
             on:focus={filterResults}
-            class="spectrum-Textfield-input"
+            class="spectrum-Textfield-input autocomplete-input"
           />
         </div>
 
