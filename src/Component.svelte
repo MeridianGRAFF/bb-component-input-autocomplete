@@ -74,8 +74,8 @@
     inputValue = removeBold(resultName);
     filteredResults = [];
     hiLiteIndex = null;
-    document.querySelector('input.spectrum-Textfield-input').focus();
     fieldApi?.setValue(inputValue);
+    document.querySelector('input.spectrum-Textfield-input').focus();
   };
 
   const filterResults = (e) => {
