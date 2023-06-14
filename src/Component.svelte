@@ -74,7 +74,7 @@
     inputValue = removeBold(resultName);
     filteredResults = [];
     hiLiteIndex = null;
-    //document.querySelector('#country-input').focus();
+    document.querySelector('input.spectrum-Textfield-input').focus();
     fieldApi?.setValue(inputValue);
   };
 
