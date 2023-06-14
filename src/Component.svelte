@@ -81,7 +81,7 @@
   };
 
   const filterResults = (e) => {
-    if (autocompleteClicked) === 1 {
+    if (autocompleteClicked === 1) {
       autocompleteClicked = 0;
       clearInput();
       return;
