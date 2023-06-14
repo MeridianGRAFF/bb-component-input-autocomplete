@@ -28,8 +28,8 @@
   let hiLiteIndex = null;
   let searchInput; // use with bind:this to focus element
   let inputValue = "";
-  let autocompleteHover = 0
-  let autocompleteClicked = 0
+  let autocompleteHover = 0;
+  let autocompleteClicked = 0;
 
   const formApi = formContext?.formApi;
   const labelPos = fieldGroupContext?.labelPosition || "above";
@@ -81,7 +81,7 @@
   };
 
   const filterResults = (e) => {
-    if autocompleteClicked == 1 {
+    if (autocompleteClicked) === 1 {
       autocompleteClicked = 0;
       clearInput();
       return;
