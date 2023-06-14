@@ -76,6 +76,7 @@
     hiLiteIndex = null;
     fieldApi?.setValue(inputValue);
     document.querySelector('input.spectrum-Textfield-input').focus();
+    hoverOff();
   };
 
   const filterResults = (e) => {
